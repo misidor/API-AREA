@@ -1,14 +1,9 @@
 import java.util.List;
 
-
-/*
-    Module must be in a Module Package and named as ServiceModule
- */
-public interface IModule
+public interface IModule extends Runnable
 {
     boolean logIn(String login, String pass);
-    void start();
-    void join();
+    void run();
     void checkTriggers();
     List<IAction> getActions();
     void setActions(List<IAction> t_actions);
