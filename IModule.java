@@ -1,11 +1,14 @@
 import java.util.List;
 
+
 /*
-    Need to be threaded extend runnable ?
+    Module must be in a Module Package and named as ServiceModule
  */
 public interface IModule
 {
     boolean logIn(String login, String pass);
+    void start();
+    void join();
     void checkTriggers();
     List<IAction> getActions();
     void setActions(List<IAction> t_actions);
